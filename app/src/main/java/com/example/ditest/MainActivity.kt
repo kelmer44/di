@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.ditest.graph.Factory
 import com.example.ditest.graph.FactoryHolderModule
 import com.example.ditest.graph.ObjectGraph
+import com.example.ditest.graph.ReflectiveModule
 import com.example.ditest.graph.get
 import com.example.ditest.graph.install
 import com.example.ditest.graph.installSingleton
@@ -26,23 +27,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun prepareGraph(): ObjectGraph {
-        val module = FactoryHolderModule()
+        val bindingModule = FactoryHolderModule().apply {
+            bind<Heater, ElectricHeater>()
+            bind<Pump, Thermosiphon>()
+        }
 
-        module.installSingleton {
-            CoffeLogger()
-        }
-        module.installSingleton {
-            ElectricHeater(get())
-        }
-        module.install {
-            Thermosiphon(get(), get())
-        }
-        module.install {
-            CoffeMaker(get(), get(), get())
-        }
-        module.bind<Heater, ElectricHeater>()
-        module.bind<Pump, Thermosiphon>()
-        return ObjectGraph(module)
+        return ObjectGraph(
+            bindingModule,
+            ReflectiveModule()
+        )
     }
 
     inline fun <reified REQUESTED, reified PROVIDED : REQUESTED> FactoryHolderModule.bind() {

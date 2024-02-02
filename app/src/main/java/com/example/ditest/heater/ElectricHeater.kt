@@ -4,6 +4,9 @@
 package com.example.ditest.heater
 
 import com.example.ditest.logger.CoffeLogger
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class ElectricHeater (logger: CoffeLogger): Heater {
+@Singleton
+class ElectricHeater @Inject constructor(logger: CoffeLogger): Heater {
 }

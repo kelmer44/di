@@ -3,6 +3,10 @@
  */
 package com.example.ditest.logger
 
-class CoffeLogger
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class CoffeLogger @Inject constructor()
 {
 }

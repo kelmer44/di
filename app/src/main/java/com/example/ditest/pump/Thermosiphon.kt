@@ -5,6 +5,7 @@ package com.example.ditest.pump
 
 import com.example.ditest.logger.CoffeLogger
 import com.example.ditest.heater.Heater
+import javax.inject.Inject
 
-class Thermosiphon(logger: CoffeLogger, heater: Heater) : Pump {
+class Thermosiphon @Inject constructor(logger: CoffeLogger, heater: Heater) : Pump {
 }
