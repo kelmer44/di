@@ -1,6 +1,6 @@
 /*
  * Copyright 2023 Sirius XM Holdings Inc. All rights reserved.
  */
-package com.example.ditest.heater
+package com.example.ditest.component
 
-interface Heater
+annotation class Binds

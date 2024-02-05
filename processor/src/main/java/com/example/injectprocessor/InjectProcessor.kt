@@ -1,8 +1,6 @@
 /*
  * Copyright 2023 Sirius XM Holdings Inc. All rights reserved.
  */
-@file:OptIn(KspExperimental::class, KspExperimental::class)
-
 package com.example.injectprocessor
 
 import append
@@ -41,6 +39,7 @@ class InjectProcessor(
         return unprocessedSymbols
     }
 
+    @OptIn(KspExperimental::class)
     inner class InjectConstructorVisitor : KSVisitorVoid() {
         override fun visitFunctionDeclaration(function: KSFunctionDeclaration, data: Unit) {
             val injectedClass = function.parentDeclaration as KSClassDeclaration

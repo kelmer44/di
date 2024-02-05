@@ -30,4 +30,4 @@ inline fun <reified T> FactoryHolderModule.installSingleton(
     install(T::class.java, singleton(factory))
 }
 
-val UNINTIALIZED = Any()
+public val UNINITIALIZED = Any()
