@@ -8,5 +8,4 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class ElectricHeater @Inject constructor(logger: CoffeLogger): Heater {
-}
+class ElectricHeater @Inject constructor(logger: CoffeLogger): Heater

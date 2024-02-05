@@ -1,7 +1,7 @@
 /*
  * Copyright 2023 Sirius XM Holdings Inc. All rights reserved.
  */
-package com.example.module
+package com.example.ditest.module
 
 import com.example.ditest.factory.Factory
 

@@ -1,10 +1,11 @@
 /*
  * Copyright 2023 Sirius XM Holdings Inc. All rights reserved.
  */
-package com.example.module
+package com.example.ditest.module
 
 import com.example.ditest.factory.Factory
 import com.example.ditest.factory.ReflectiveFactory
+import com.example.ditest.factory.singleton
 import javax.inject.Singleton
 
 class ReflectiveModule : Module {

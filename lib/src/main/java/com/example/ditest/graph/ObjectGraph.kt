@@ -1,10 +1,10 @@
 /*
  * Copyright 2023 Sirius XM Holdings Inc. All rights reserved.
  */
-package com.example.graph
+package com.example.ditest.graph
 
-import com.example.module.Module
-import com.example.module.FactoryHolderModule
+import com.example.ditest.module.Module
+import com.example.ditest.module.FactoryHolderModule
 
 
 class ObjectGraph(private val modules: List<Module>) {

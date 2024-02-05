@@ -3,5 +3,4 @@
  */
 package com.example.ditest.pump
 
-interface Pump {
-}
+interface Pump

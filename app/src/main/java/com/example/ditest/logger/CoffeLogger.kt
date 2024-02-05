@@ -8,5 +8,3 @@ import javax.inject.Singleton
 
 @Singleton
 class CoffeLogger @Inject constructor()
-{
-}

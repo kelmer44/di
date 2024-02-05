@@ -7,5 +7,5 @@ version = "1.0-SNAPSHOT"
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(project(":lib"))
-//    ksp(project(":processor"))
+    ksp(project(":processor"))
 }
