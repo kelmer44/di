@@ -3,9 +3,8 @@
  */
 package com.example.ditest
 
-import android.util.Log
-import com.example.ditest.graph.Factory
-import com.example.ditest.graph.get
+import com.example.ditest.factory.Factory
+import com.example.graph.get
 import com.example.ditest.heater.Heater
 import com.example.ditest.logger.CoffeLogger
 import com.example.ditest.pump.Pump
@@ -14,9 +13,8 @@ import javax.inject.Inject
 class CoffeMaker @Inject constructor(logger: CoffeLogger, heater: Heater, pump: Pump) {
 
     fun brew() {
-        Log.i("COFFE", "Brewing coffee!")
+        println("Brewing coffee!!")
     }
-
 }
 
 val coffeMakerFactory = Factory { objectGraph ->
